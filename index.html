@@ -4,16 +4,16 @@
 <title>EMİR AKGÜN🎮</title>
 <link rel="shortcut icon" href="console.png" type="image/x-icon">
 <link rel="icon" href="/favicon.ico" type="image/x-icon">
-
 </head>
+
+<body>
 <p>
 <font size= "21px"><i><b>EMİR AKGÜN</b></i></font><br>
 
 <br>
 <img src="xpad.png" style="width:560px;"><br>
 <br>
-<i><a href="//24timezones.com/Ankara/time" style="text-decoration: none" class="clock24" id="tz24-1674466175-c119-eyJob3VydHlwZSI6MTIsInNob3dkYXRlIjoiMSIsInNob3dzZWNvbmRzIjoiMCIsImNvbnRhaW5lcl9pZCI6ImNsb2NrX2Jsb2NrX2NiNjNjZTUzN2Y3ZmJiNiIsInR5cGUiOiJkYiIsImxhbmciOiJlbiJ9" title="Ankara Time" target="_blank" rel="nofollow">Ankara time</a>
-</i><script type="text/javascript" src="//w.24timezones.com/l.js" async></script>
+<div id="clock"></div> <a href="https://24timezones.com/Istanbul/time">İSTANBUL - TURKEY</a>
 <br><br>
 
 <a href="about.html" style="text-decoration: none; color: #00e;">about</a> //
@@ -23,12 +23,29 @@
 
 <!--css-->
 <style>
-body {top: 0; left: 0; width: 99%; height: 97%;
-    position: absolute; display: table;} 
-  p {display: table-cell; vertical-align: middle; text-align: center}
+  body{
+    margin-top: 10%;
+    text-align: center;
+  }
+  #clock{
+    display: inline-flex;
+    font-style: italic;
+    font-weight: 900;
+  }
+  a{text-decoration: none; font-style: italic; font-family: monospace;}
 </style>
 <br>
 <br>
 <script src="https://kit.fontawesome.com/680d390181.js" crossorigin="anonymous"></script>
+<script>
+  function displayLocalTime() {
+      var istanbulTime = new Date().toLocaleString("tr-TR", { timeZone: "Europe/Istanbul" });
+      document.getElementById("clock").textContent = istanbulTime;
+    }
+
+    setInterval(displayLocalTime, 1000); // Her saniyede bir güncellenmesi için
+
+    window.onload = displayLocalTime; // Sayfa yüklendiğinde saat gösterilsin
+</script>
 </body>
 </html>
